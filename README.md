@@ -1,35 +1,49 @@
-# React + TypeScript + Vite
+# devstack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+devstack is a simple react project where i can see different technologies and add them to my own tech stack. i made this project to practice some basic react concepts and understand how everything works
 
-Currently, two official plugins are available:
+## technologies i used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- react
+- typescript
+- vite
+- html
+- css
 
-## React Compiler
+## features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- view different technologies
+- add technologies to my stack
+- remove technologies from my stack
+- show a message when the stack is empty
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the Oxlint configuration
+## react questions & answers
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 1. what is jsx, and why is it used in react?
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+jsx is a way to write html like code inside javascript or typescript it makes the react code more easy to read and write.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.  
+### 2. what is the difference between props and state?
+
+props are used to pass data from a parent component to a child component.
+
+state is used to store data inside a component the state can change when the user do something on the website.
+
+### 3. what does the usestate hook do, and where did you use it in this project?
+
+usestate is used to store and update data in a react component
+
+in this project i used usestate to store the technologies that i add to my stack.
+
+### 4. what does the useeffect hook do, and why did you need it to load the json data?
+
+useeffect is used to run some code after the component is loaded or updated.
+
+i used useeffect to load the json data when the website starts so i can show the technology list.
+
+### 5. why does every item in a .map() list need a unique key prop?
+
+react needs a unique key for every item in a list. it helps react know which item is changed
+
